@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs dashbot
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ruby /usr/bin/dashbot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
