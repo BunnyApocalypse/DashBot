@@ -1,5 +1,6 @@
 require 'slack-ruby-client'
 require 'dogapi'
+require 'faye/websocket'
 require '/etc/dashbot/environment'
 
 token= ENV['slack-token']
