@@ -2,7 +2,7 @@
 Description=Runs dashbot
 
 [Service]
-ExecStart=/bin/rubyy /bin/dashbot
+ExecStart=/bin/irb /bin/dashbot
 
 [Install]
 WantedBy=multi-user.target
