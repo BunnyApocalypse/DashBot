@@ -2,9 +2,7 @@
 Description=Runs dashbot
 
 [Service]
-Type=oneshot
-ExecStart=/bin/ruby /bin/dashbot
-RemainAfterExit=yes
+ExecStart=/bin/rubyy /bin/dashbot
 
 [Install]
 WantedBy=multi-user.target
