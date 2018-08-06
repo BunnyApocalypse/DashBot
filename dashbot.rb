@@ -1,13 +1,12 @@
 require 'slack-ruby-client'
 require 'dogapi'
 require 'faye/websocket'
-require '/etc/dashbot/environment'
 
-token= ENV['slack-token']
-api_key = ENV['datadog-api-key']
-app_key = ENV['datadog-app-key']
-board_id = ENV['datadog-board-id']
-widget_number = ENV['datadog-widget-number'].to_i
+token = ENV['SLACK_TOKEN']
+api_key = ENV['DATADOG_API_KEY']
+app_key = ENV['DATADOG_APP_KEY']
+board_id = ENV['DATADOG_BOARD_ID']
+widget_number = ENV['DATADOG_WIDGET_NUMBER'].to_i
 
 Slack.configure do |config|
   config.token = token

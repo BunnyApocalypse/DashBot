@@ -1,6 +1,7 @@
-ENV['slack-token'] = "YOUR-SLACK-BOT-TOKEN"
-ENV['datadog-api-key'] = 'YOUR-DATADOG-API-KEY'
-ENV['datadog-app-key'] = 'YOUR-DATADOG-APP-KEY'
-ENV['datadog-board-id'] = 'YOUR-BOARD-ID'
-# The widget id of the image on your datadog board
-ENV['datadog-widget-number'] = 'YOUR-WIDGET-NUMBER'
+SLACK_TOKEN=YOUR-SLACK-TOKEN
+DATADOG_API_KEY=YOUR-API-KEY
+DATADOG_APP_KEY=YOUR-APP-KEY
+DATADOG_BOARD_ID=YOUR-BOARD-ID
+# The widget id of the image you want to push to
+DATADOG_WIDGET_NUMBER=YOUR-WIDGET-NUMBER
+

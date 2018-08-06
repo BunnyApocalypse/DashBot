@@ -2,7 +2,12 @@
 Description=Runs dashbot
 
 [Service]
-ExecStart=/bin/irb /bin/dashbot
+EnvironmentFile=/etc/dashbot/environment
+ExecStart=/usr/bin/ruby /bin/dashbot
+User=dashbot
+Group=dashbot
+WorkingDirectory=/run/dashbot
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
