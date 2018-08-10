@@ -23,7 +23,8 @@ end
 
 client.on :message do |data|
   #using giphy
-  if defined? data.attachments[0].image_url
+  puts data.attachments[0].image_url
+  if data&.attachments&.at(0)&.image_url
       url = data.attachments[0].image_url
       result = dog.get_screenboard(board_id)
       board = result[1]
@@ -31,7 +32,7 @@ client.on :message do |data|
       dog.update_screenboard(board_id, board)
   end
   #Linking to an image directly/an imgur album
-  if defined? data.message.attachments[0].image_url
+  if data&.message&.attachments&.at(0)&.image_url
       url = data.message.attachments[0].image_url
       result = dog.get_screenboard(board_id)
       board = result[1]
@@ -48,4 +49,5 @@ client.on :closed do |_data|
   puts "Client has disconnected successfully!"
 end
 
+STDOUT.sync = true
 client.start!
